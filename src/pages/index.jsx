@@ -26,7 +26,7 @@ export default function Home() {
         <MiddleContainer /> {/* Done */}
         <WhyIVFContainer /> {/* Done */}
         <CarouselContainer /> {/* Done */}
-        <LastContainer />
+        <LastContainer /> {/* Done */}
       </Layout>
     </>
   );
