@@ -3,6 +3,7 @@ import { MiddleContainer } from "@/components/Home/MiddleContainer";
 import { RoadMapContainer } from "@/components/Home/RoadMapContainer";
 import { StagesContainer } from "@/components/Home/StagesContainer";
 import { TopContainer } from "@/components/Home/TopContainer";
+import { WhyIVFContainer } from "@/components/Home/WhyIVFContainer";
 import { Layout } from "@/components/Layout/Layout";
 import Head from "next/head";
 
@@ -20,7 +21,8 @@ export default function Home() {
         <FormContainer /> {/* Done */}
         <StagesContainer /> {/* Done */}
         <RoadMapContainer /> {/* Done */}
-        <MiddleContainer />
+        <MiddleContainer /> {/* Done */}
+        <WhyIVFContainer />
       </Layout>
     </>
   );

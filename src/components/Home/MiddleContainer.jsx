@@ -82,8 +82,8 @@ const DesktopContainer = () => {
             item
             size={{ xs: 12, md: 6 }}
             sx={{
-              pl: { xs: 2, md: "20px" },
-              pr: { xs: 2, md: "20px", lg: "76px" },
+              pl: { xs: 2, md: "30px" },
+              pr: { xs: 2, md: "15px", lg: "66px" },
             }}
           >
             <Typography
