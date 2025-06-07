@@ -23,7 +23,7 @@ export const CarouselContainer = () => {
     {
       id: 1,
       title: "Couples trying to conceive for 6 months or more",
-      image: "/images/carousel/img1.png",
+      image: "/images/carousel/Img1.png",
       bgColor: "#E6D9E8",
       textColor: "#A66FAD",
     },
