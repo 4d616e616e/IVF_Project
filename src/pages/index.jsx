@@ -1,5 +1,6 @@
 import { CarouselContainer } from "@/components/Home/CarouselContainer";
 import { FormContainer } from "@/components/Home/FormContainer";
+import { LastContainer } from "@/components/Home/LastContainer";
 import { MiddleContainer } from "@/components/Home/MiddleContainer";
 import { RoadMapContainer } from "@/components/Home/RoadMapContainer";
 import { StagesContainer } from "@/components/Home/StagesContainer";
@@ -24,7 +25,8 @@ export default function Home() {
         <RoadMapContainer /> {/* Done */}
         <MiddleContainer /> {/* Done */}
         <WhyIVFContainer /> {/* Done */}
-        <CarouselContainer />
+        <CarouselContainer /> {/* Done */}
+        <LastContainer />
       </Layout>
     </>
   );

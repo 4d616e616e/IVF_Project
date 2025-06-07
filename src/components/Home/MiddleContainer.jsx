@@ -13,14 +13,14 @@ import React from "react";
 // Mobile Component
 const MobileContainer = () => {
   return (
-    <Box sx={{ my: "40px" }}>
+    <Box sx={{ my: "80px" }}>
       <Container maxWidth="xl" sx={{ px: 2 }}>
         <Box
           sx={{
             pt: "30px",
             pb: "30px",
             bgcolor: "#F8F6EF",
-            borderRadius: "10px",
+            borderRadius: "20px",
           }}
         >
           <Box sx={{ textAlign: "center", mb: 3 }}>
