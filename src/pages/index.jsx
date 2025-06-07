@@ -1,4 +1,6 @@
 import { FormContainer } from "@/components/Home/FormContainer";
+import { RoadMapContainer } from "@/components/Home/RoadMapContainer";
+import { StagesContainer } from "@/components/Home/StagesContainer";
 import { TopContainer } from "@/components/Home/TopContainer";
 import { Layout } from "@/components/Layout/Layout";
 import Head from "next/head";
@@ -14,7 +16,9 @@ export default function Home() {
       </Head>
       <Layout>
         <TopContainer />
-        <FormContainer />
+        <FormContainer /> {/* Done */}
+        <StagesContainer /> {/* Done */}
+        <RoadMapContainer />
       </Layout>
     </>
   );
