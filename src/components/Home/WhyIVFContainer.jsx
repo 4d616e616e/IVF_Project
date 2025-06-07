@@ -97,7 +97,7 @@ const WhyIVFItem = ({ item }) => {
 
 export const WhyIVFContainer = () => {
   return (
-    <Box sx={{ my: "80px" }}>
+    <Box sx={{ mt: "80px", mb: "20px" }}>
       <Container maxWidth="xl">
         <Box sx={{ mx: { xs: 0, md: 10 } }}>
           <Typography
