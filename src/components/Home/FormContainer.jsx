@@ -9,6 +9,9 @@ import {
   FormHelperText,
   useMediaQuery,
   useTheme,
+  Alert,
+  Snackbar,
+  CircularProgress,
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -29,6 +32,13 @@ export const FormContainer = () => {
     phoneNumber: "",
     maleAge: "",
     femaleAge: "",
+  });
+
+  const [loading, setLoading] = React.useState(false);
+  const [alert, setAlert] = React.useState({
+    open: false,
+    message: "",
+    severity: "success", // 'success' | 'error' | 'warning' | 'info'
   });
 
   const validateFormData = () => {
@@ -78,16 +88,94 @@ export const FormContainer = () => {
     return Object.values(newErrors).every((error) => error === "");
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    //validate the form data here
-    const isValidate = validateFormData();
-    if (isValidate) {
-      console.log("Form is valid, submitting...", formData);
-      // Handle form submission here
-    } else {
-      console.log("Form has errors");
+  const submitFormData = async (data) => {
+    try {
+      const response = await fetch("https://devapi.homeivf.com/api/form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name.trim(),
+          phone_number: parseInt(data.phoneNumber),
+          male_age: parseInt(data.maleAge),
+          female_age: parseInt(data.femaleAge),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      return { success: true, data: result };
+    } catch (error) {
+      console.error("API Error:", error);
+      return { success: false, error: error.message };
     }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate the form data
+    const isValid = validateFormData();
+    if (!isValid) {
+      console.log("Form has validation errors");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const result = await submitFormData(formData);
+
+      if (result.success) {
+        setAlert({
+          open: true,
+          message:
+            "Form submitted successfully! Our IVF expert will contact you soon.",
+          severity: "success",
+        });
+
+        // Reset form data on success
+        setFormData({
+          name: "",
+          phoneNumber: "",
+          maleAge: "",
+          femaleAge: "",
+        });
+
+        // Clear any existing errors
+        setErrors({
+          name: "",
+          phoneNumber: "",
+          maleAge: "",
+          femaleAge: "",
+        });
+      } else {
+        setAlert({
+          open: true,
+          message: `Failed to submit form: ${result.error}`,
+          severity: "error",
+        });
+      }
+    } catch (error) {
+      setAlert({
+        open: true,
+        message: "An unexpected error occurred. Please try again.",
+        severity: "error",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCloseAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setAlert({ ...alert, open: false });
   };
 
   return (
@@ -313,6 +401,7 @@ export const FormContainer = () => {
             </Grid>
             <Button
               type="submit"
+              disabled={loading}
               sx={{
                 mt: "24px",
                 bgcolor: "#FA8E74",
@@ -322,17 +411,50 @@ export const FormContainer = () => {
                 textTransform: "none",
                 fontSize: "20px",
                 fontWeight: "700",
+                position: "relative",
                 "&:hover": {
                   bgcolor: "#FA8E74",
+                },
+                "&:disabled": {
+                  bgcolor: "#FA8E74",
+                  opacity: 0.7,
                 },
               }}
               fullWidth
             >
-              Talk to our IVF Expert
+              {loading ? (
+                <>
+                  <CircularProgress
+                    size={20}
+                    sx={{ color: "#FEFEFE", mr: 1 }}
+                  />
+                  Submitting...
+                </>
+              ) : (
+                "Talk to our IVF Expert"
+              )}
             </Button>
           </form>
         </Box>
       </Container>
+
+      {/* Snackbar with Alert */}
+      <Snackbar
+        open={alert.open}
+        autoHideDuration={6000}
+        onClose={handleCloseAlert}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseAlert}
+          severity={alert.severity}
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          {alert.message}
+        </Alert>
+      </Snackbar>
+
       <Box
         sx={{
           position: "absolute",
