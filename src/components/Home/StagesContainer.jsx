@@ -2,7 +2,7 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const StagesContainer = () => {
+export const StagesContainer = ({ scrollToForm }) => {
   return (
     <>
       <Box sx={{ mt: { xs: "70px", md: "150px" } }}>
@@ -41,6 +41,7 @@ export const StagesContainer = () => {
             Please answer these to help us make your journey better
           </Typography>
           <Button
+            onClick={scrollToForm}
             sx={{
               bgcolor: "#FA8E74",
               borderRadius: "10px",

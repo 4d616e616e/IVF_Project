@@ -64,7 +64,7 @@ const MobileContainer = () => {
 };
 
 // Desktop Component
-const DesktopContainer = () => {
+const DesktopContainer = ({ scrollToForm }) => {
   return (
     <Box sx={{ bgcolor: "#F8F6EF", my: "80px" }}>
       <Container maxWidth="xl">
@@ -104,6 +104,7 @@ const DesktopContainer = () => {
               <span style={{ fontWeight: "bolder" }}> your doorstep</span>.
             </Typography>
             <Button
+              onClick={scrollToForm}
               sx={{
                 bgcolor: "#FA8E74",
                 borderRadius: "10px",
@@ -122,9 +123,17 @@ const DesktopContainer = () => {
   );
 };
 
-export const MiddleContainer = () => {
+export const MiddleContainer = ({ scrollToForm }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down(780));
 
-  return <>{isMobile ? <MobileContainer /> : <DesktopContainer />}</>;
+  return (
+    <>
+      {isMobile ? (
+        <MobileContainer scrollToForm={scrollToForm} />
+      ) : (
+        <DesktopContainer scrollToForm={scrollToForm} />
+      )}
+    </>
+  );
 };

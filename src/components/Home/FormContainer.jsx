@@ -30,7 +30,7 @@ const style = {
   p: 4,
 };
 
-export const FormContainer = () => {
+export const FormContainer = ({ formRef }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery("(max-width:500px)");
   const [open, setOpen] = React.useState(false);
@@ -201,7 +201,10 @@ export const FormContainer = () => {
   };
 
   return (
-    <Box sx={{ position: "relative", border: "2px solid transparent" }}>
+    <Box
+      sx={{ position: "relative", border: "2px solid transparent" }}
+      ref={formRef}
+    >
       <Box
         sx={{
           position: "absolute",

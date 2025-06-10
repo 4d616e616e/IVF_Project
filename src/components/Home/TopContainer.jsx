@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 
-export const TopContainer = () => {
+export const TopContainer = ({ scrollToForm }) => {
   const isMobile = useMediaQuery("(max-width:500px)");
 
   return (
@@ -107,6 +107,7 @@ export const TopContainer = () => {
                 <span style={{ fontWeight: "bold" }}>your home.</span>
               </Typography>
               <Button
+                onClick={scrollToForm}
                 sx={{
                   fontSize: "20px",
                   textTransform: "none",

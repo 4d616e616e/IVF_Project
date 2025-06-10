@@ -8,8 +8,15 @@ import { TopContainer } from "@/components/Home/TopContainer";
 import { WhyIVFContainer } from "@/components/Home/WhyIVFContainer";
 import { Layout } from "@/components/Layout/Layout";
 import Head from "next/head";
+import { useReducer } from "react";
 
 export default function Home() {
+  const formRef = useReducer(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <Head>
@@ -19,13 +26,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <TopContainer />
-        <FormContainer /> {/* Done */}
-        <StagesContainer /> {/* Done */}
+        <TopContainer scrollToForm={scrollToForm} />
+        <FormContainer formRef={formRef} /> {/* Done */}
+        <StagesContainer scrollToForm={scrollToForm} /> {/* Done */}
         <RoadMapContainer /> {/* Done */}
-        <MiddleContainer /> {/* Done */}
+        <MiddleContainer scrollToForm={scrollToForm} /> {/* Done */}
         <WhyIVFContainer /> {/* Done */}
-        <CarouselContainer /> {/* Done */}
+        <CarouselContainer scrollToForm={scrollToForm} /> {/* Done */}
         <LastContainer /> {/* Done */}
       </Layout>
     </>

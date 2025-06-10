@@ -15,7 +15,7 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Scrollbar, Navigation } from "swiper/modules";
 
-export const CarouselContainer = () => {
+export const CarouselContainer = ({ scrollToForm }) => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up(500));
 
@@ -167,6 +167,7 @@ export const CarouselContainer = () => {
           {isDesktop && (
             <Box sx={{ textAlign: "center" }}>
               <Button
+                onClick={scrollToForm}
                 sx={{
                   bgcolor: "#FA8E74",
                   borderRadius: "10px",
