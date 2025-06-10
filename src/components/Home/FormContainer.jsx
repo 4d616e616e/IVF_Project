@@ -12,13 +12,30 @@ import {
   Alert,
   Snackbar,
   CircularProgress,
+  Modal,
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { UserForm } from "../UserForm/UserForm";
+import { setCookie } from "cookies-next";
+
+const style = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  bgcolor: "background.paper",
+  boxShadow: 24,
+  p: 4,
+};
 
 export const FormContainer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery("(max-width:500px)");
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const [formData, setFormData] = React.useState({
     name: "",
@@ -102,12 +119,11 @@ export const FormContainer = () => {
           female_age: parseInt(data.femaleAge),
         }),
       });
-
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
       const result = await response.json();
+
       return { success: true, data: result };
     } catch (error) {
       console.error("API Error:", error);
@@ -153,6 +169,12 @@ export const FormContainer = () => {
           maleAge: "",
           femaleAge: "",
         });
+
+        setCookie("form_id", result?.data?.data?.form_id, {
+          maxAge: 60 * 60 * 24 * 7,
+        });
+
+        setOpen(true);
       } else {
         setAlert({
           open: true,
@@ -479,6 +501,17 @@ export const FormContainer = () => {
           />
         </Box>
       </Box>
+
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <UserForm handleModalClose={handleClose} />
+        </Box>
+      </Modal>
     </Box>
   );
 };
