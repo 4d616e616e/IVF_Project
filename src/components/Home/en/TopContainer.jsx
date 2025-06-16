@@ -96,7 +96,7 @@ export const TopContainer = ({ scrollToForm }) => {
                 }}
                 className="font-400"
               >
-                With HomeIVF, bring the clinic to
+                With HomeIVF, bring the clinic to{" "}
                 <span style={{ fontWeight: "bold" }} className="font-700">
                   your home.
                 </span>
