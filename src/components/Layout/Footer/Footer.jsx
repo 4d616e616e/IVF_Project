@@ -42,17 +42,21 @@ export const Footer = () => {
               )}
 
               <Box sx={{ mx: { xs: 2, md: 0 }, my: { xs: "21px", md: 0 } }}>
-                <Typography fontSize="22px">
+                <Typography fontSize="22px" className="font-400">
                   You’ve been strong for so long. Let us take it from here.
                 </Typography>
-                <Typography fontSize="22px" sx={{ my: "16px" }}>
+                <Typography
+                  fontSize="22px"
+                  sx={{ my: "16px" }}
+                  className="font-400"
+                >
                   At HomeIVF, you don’t walk this road alone.
                 </Typography>
-                <Typography fontSize="22px">
+                <Typography fontSize="22px" className="font-400">
                   We walk with you, with{" "}
-                  <span style={{ fontWeight: "700" }}>science</span>,{" "}
-                  <span style={{ fontWeight: "700" }}>care</span>, and{" "}
-                  <span style={{ fontWeight: "700" }}>heart.</span>
+                  <span className="font-700">science</span>,{" "}
+                  <span className="font-700">care</span>, and{" "}
+                  <span className="font-700">heart.</span>
                 </Typography>
               </Box>
             </Box>

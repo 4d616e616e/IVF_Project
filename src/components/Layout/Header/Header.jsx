@@ -1,10 +1,24 @@
-import { Call, CallOutlined, LanguageRounded } from "@mui/icons-material";
+import { CallOutlined, LanguageRounded } from "@mui/icons-material";
 import { Box, Button, MenuItem, Select } from "@mui/material";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useState, useEffect } from "react";
 
-export const Header = () => {
-  const [language, setLanguage] = useState("en");
+export const Header = ({ scrollToForm, pathname }) => {
+  const [language, setLanguage] = useState("/");
+  const router = useRouter();
+
+  // Update language state when router changes
+  useEffect(() => {
+    setLanguage(router.pathname);
+  }, [router.pathname]);
+
+  const handleLanguageChange = (e) => {
+    const selectedPath = e.target.value;
+    setLanguage(selectedPath);
+    router.push(selectedPath);
+  };
+
   return (
     <Box
       sx={{
@@ -28,7 +42,7 @@ export const Header = () => {
           displayEmpty
           value={language}
           size="small"
-          onChange={(e) => setLanguage(e.target.value)}
+          onChange={handleLanguageChange}
           sx={{
             display: { xs: "none", sm: "flex" },
             border: "1px solid #00000014",
@@ -52,16 +66,18 @@ export const Header = () => {
           renderValue={(selected) => (
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <LanguageRounded fontSize="small" />
-              {selected === "" ? (
-                <em>Select Language</em>
-              ) : (
-                selected.toUpperCase()
-              )}
+              {selected === "/"
+                ? "EN"
+                : selected === "/hindi"
+                ? "हिंदी"
+                : selected === "/malayalam"
+                ? "മല്ലു"
+                : "Select Language"}
             </Box>
           )}
         >
           <MenuItem
-            value="en"
+            value="/"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -70,11 +86,11 @@ export const Header = () => {
               fontSize: "14px",
             }}
           >
-            <LanguageRounded fontSize="14px" />
+            <LanguageRounded fontSize="small" />
             EN
           </MenuItem>
           <MenuItem
-            value="in"
+            value="/hindi"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -83,8 +99,21 @@ export const Header = () => {
               fontSize: "14px",
             }}
           >
-            <LanguageRounded fontSize="14px" />
-            IN
+            <LanguageRounded fontSize="small" />
+            हिंदी
+          </MenuItem>
+          <MenuItem
+            value="/malayalam"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              color: "#717171",
+              fontSize: "14px",
+            }}
+          >
+            <LanguageRounded fontSize="small" />
+            മല്ലു
           </MenuItem>
         </Select>
       </Box>
@@ -149,8 +178,13 @@ export const Header = () => {
               borderColor: "#f97b5d",
             },
           }}
+          onClick={scrollToForm}
         >
-          Book Now
+          {pathname === "/hindi"
+            ? "अभी बुक करें"
+            : pathname === "/malayalam"
+            ? "ഇപ്പോള്‍ ബുക്ക്"
+            : "Book Now"}
         </Button>
       </Box>
     </Box>

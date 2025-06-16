@@ -1,0 +1,120 @@
+/* AeonikPro Thin */
+@font-face {
+  font-family: "AeonikPro Thin";
+  src: url("/fonts/AeonikPro-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikPro Thin Italic";
+  src: url("/fonts/AeonikPro-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* AeonikPro Air */
+@font-face {
+  font-family: "AeonikPro Air";
+  src: url("/fonts/AeonikPro-Air.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikPro Air Italic";
+  src: url("/fonts/AeonikPro-AirItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* AeonikPro Light */
+@font-face {
+  font-family: "AeonikPro Light";
+  src: url("/fonts/AeonikPro-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikPro Light Italic";
+  src: url("/fonts/AeonikPro-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* AeonikPro Regular */
+@font-face {
+  font-family: "AeonikPro Regular";
+  src: url("/fonts/AeonikPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikPro Regular Italic";
+  src: url("/fonts/AeonikPro-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* AeonikPro Medium */
+@font-face {
+  font-family: "AeonikPro Medium";
+  src: url("/fonts/AeonikPro-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikPro Medium Italic";
+  src: url("/fonts/AeonikPro-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* AeonikPro Bold */
+@font-face {
+  font-family: "AeonikPro Bold";
+  src: url("/fonts/AeonikPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikPro Bold Italic";
+  src: url("/fonts/AeonikPro-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* AeonikPro Black */
+@font-face {
+  font-family: "AeonikPro Black";
+  src: url("/fonts/AeonikPro-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AeonikPro Black Italic";
+  src: url("/fonts/AeonikPro-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+.font-700 {
+  font-family: "AeonikPro Bold" !important;
+}
+
+.font-500 {
+  font-family: "AeonikPro Medium" !important;
+}
+
+.font-400 {
+  font-family: "AeonikPro Regular" !important;
+}
+
+.font-300 {
+  font-family: "AeonikPro Light" !important;
+}

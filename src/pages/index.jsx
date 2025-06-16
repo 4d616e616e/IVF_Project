@@ -1,11 +1,11 @@
-import { CarouselContainer } from "@/components/Home/CarouselContainer";
-import { FormContainer } from "@/components/Home/FormContainer";
-import { LastContainer } from "@/components/Home/LastContainer";
-import { MiddleContainer } from "@/components/Home/MiddleContainer";
-import { RoadMapContainer } from "@/components/Home/RoadMapContainer";
-import { StagesContainer } from "@/components/Home/StagesContainer";
-import { TopContainer } from "@/components/Home/TopContainer";
-import { WhyIVFContainer } from "@/components/Home/WhyIVFContainer";
+import { CarouselContainer } from "@/components/Home/en/CarouselContainer";
+import { FormContainer } from "@/components/Home/en/FormContainer";
+import { LastContainer } from "@/components/Home/en/LastContainer";
+import { MiddleContainer } from "@/components/Home/en/MiddleContainer";
+import { RoadMapContainer } from "@/components/Home/en/RoadMapContainer";
+import { StagesContainer } from "@/components/Home/en/StagesContainer";
+import { TopContainer } from "@/components/Home/en/TopContainer";
+import { WhyIVFContainer } from "@/components/Home/en/WhyIVFContainer";
 import { Layout } from "@/components/Layout/Layout";
 import Head from "next/head";
 import { useReducer } from "react";
@@ -25,7 +25,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout scrollToForm={scrollToForm}>
         <TopContainer scrollToForm={scrollToForm} />
         <FormContainer formRef={formRef} /> {/* Done */}
         <StagesContainer scrollToForm={scrollToForm} /> {/* Done */}
