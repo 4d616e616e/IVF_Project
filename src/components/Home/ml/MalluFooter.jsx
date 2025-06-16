@@ -46,15 +46,15 @@ export const MalluFooter = () => {
                   നിങ്ങൾ ഇത്രയും കാലം ശക്തരായിരുന്നു. ഇനി ഞങ്ങൾ ഏറ്റെടുക്കട്ടെ.
                 </Typography>
                 <Typography
-                  fontSize="22px"
+                  fontSize="20px"
                   sx={{ my: "16px" }}
                   className="font-400"
                 >
-                  HomeIVF-ൽ, നിങ്ങൾ ഈ വഴി ഒറ്റയ്ക്ക് നടക്കില്ല
+                  HomeIVF-ൽ, നിങ്ങൾ ഈ വഴി ഒറ്റയ്ക്ക് നടക്കില്ല ഞങ്ങൾ
+                  നിങ്ങളോടൊപ്പം
                 </Typography>
                 <Typography fontSize="22px" className="font-400">
-                  ഞങ്ങൾ നിങ്ങളോടൊപ്പം നടക്കും,{" "}
-                  <span className="font-700">ശാസ്ത്രത്തോടും</span>
+                  നടക്കും, <span className="font-700">ശാസ്ത്രത്തോടും</span>
                   <span className="font-700"> പരിചരണത്തോടും</span>
                   <span className="font-700">ഹൃദയത്തോടും</span> കൂടി.
                 </Typography>

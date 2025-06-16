@@ -140,7 +140,7 @@ export const CarouselContainer = ({ scrollToForm }) => {
                     <Box
                       sx={{
                         bgcolor: item.bgColor,
-                        height: "160px",
+                        height: "190px",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",

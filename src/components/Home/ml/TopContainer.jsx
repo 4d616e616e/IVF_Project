@@ -68,30 +68,30 @@ export const TopContainer = ({ scrollToForm }) => {
             {/* Content */}
             <Box sx={{ position: "relative", zIndex: 1 }}>
               <Typography
-                fontSize={{ xs: "32px", md: "60px" }}
+                fontSize={{ xs: "32px", md: "50px" }}
                 sx={{
                   color: "#FFFFFF",
-                  lineHeight: { xs: "43px", md: "68px" },
+                  lineHeight: { xs: "43px", md: "58px" },
                 }}
                 className="font-400"
               >
                 ഒരു IVF ക്ലിനിക്ക്
               </Typography>
               <Typography
-                fontSize={{ xs: "32px", md: "55px" }}
+                fontSize={{ xs: "32px", md: "50px" }}
                 sx={{
                   color: "#FFFFFF",
-                  lineHeight: { xs: "43px", md: "68px" },
+                  lineHeight: { xs: "43px", md: "58px" },
                 }}
               >
                 <span className="font-400">സന്ദർശിക്കുമ്പോൾ നിങ്ങൾക്ക്</span>{" "}
                 <span className="font-700">അസ്വസ്ഥത</span>
               </Typography>
               <Typography
-                fontSize={{ xs: "32px", md: "60px" }}
+                fontSize={{ xs: "32px", md: "50px" }}
                 sx={{
                   color: "#FFFFFF",
-                  lineHeight: { xs: "43px", md: "68px" },
+                  lineHeight: { xs: "43px", md: "58px" },
                 }}
                 className="font-400"
               >
@@ -99,7 +99,7 @@ export const TopContainer = ({ scrollToForm }) => {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: { xs: "24px", md: "45px" },
+                  fontSize: { xs: "24px", md: "35px" },
                   lineHeight: { xs: "34px", md: "50px" },
                   color: "#DBDBDB",
                   my: "32px",
@@ -113,7 +113,7 @@ export const TopContainer = ({ scrollToForm }) => {
               <Button
                 onClick={scrollToForm}
                 sx={{
-                  fontSize: "20px",
+                  fontSize: "18px",
                   textTransform: "none",
                   bgcolor: "#FA8E74",
                   color: "#FFFFFF",

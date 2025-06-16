@@ -92,7 +92,7 @@ const DesktopContainer = ({ scrollToForm }) => {
           >
             <Typography
               sx={{ color: "#333333" }}
-              fontSize={{ xs: "38px", md: "48px" }}
+              fontSize={{ xs: "38px", md: "38px" }}
               className="font-400"
             >
               എന്താണ് <span className="font-700">HomeIVF</span>?
@@ -100,8 +100,8 @@ const DesktopContainer = ({ scrollToForm }) => {
             <Typography
               sx={{
                 color: "#717171",
-                fontSize: { md: "16px", lg: "28px" },
-                my: "35px",
+                fontSize: { sm: "16px", md: "20px", lg: "23px", xl: "28px" },
+                my: { sm: "15px", md: "20px", lg: "20px", xl: "35px" },
               }}
               className="font-400"
             >
@@ -116,7 +116,7 @@ const DesktopContainer = ({ scrollToForm }) => {
               sx={{
                 bgcolor: "#FA8E74",
                 borderRadius: "10px",
-                fontSize: "20px",
+                fontSize: "18px",
                 textTransform: "none",
                 color: "#FFFFFF",
               }}
