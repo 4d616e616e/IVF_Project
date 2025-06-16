@@ -37,7 +37,7 @@ export const Header = ({ scrollToForm, pathname }) => {
           ml: { md: "27px" },
         }}
       >
-        <Image src="/images/homrivf.svg" height={50} width={154} />
+        <Image src="/images/new_homeivf.svg" height={50} width={154} />
         <Select
           displayEmpty
           value={language}

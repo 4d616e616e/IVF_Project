@@ -23,8 +23,8 @@ import { FormCompletionScreen } from "./FormCompletionScreen";
 
 const steps = [
   "Welcome",
-  "Trying Duration",
   "Working Status",
+  "Trying Duration",
   "Medical History",
   "Health Issues",
   "Sperm Test",
@@ -395,61 +395,6 @@ export const UserForm = ({ handleModalClose }) => {
             <Typography
               variant="h5"
               component="h2"
-              sx={{ mb: 4, fontWeight: 400 }}
-            >
-              നിങ്ങൾ എത്ര കാലമായി ഒരു കുഞ്ഞിനായി ശ്രമിക്കുന്നു?
-            </Typography>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
-              <FormControl sx={{ minWidth: 200 }}>
-                <Select
-                  value={formData.tryingDuration}
-                  onChange={(e) =>
-                    handleChange("tryingDuration", e.target.value)
-                  }
-                  size="small"
-                  displayEmpty
-                  sx={{
-                    backgroundColor: "#65C3CB33",
-                    color: "#65C3CB",
-                    border: "1.5px solid #65C3CB",
-                    borderRadius: "8px",
-                    "& svg": {
-                      color: "#65C3CB",
-                    },
-                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      border: "none",
-                    },
-                    "& fieldset": {
-                      border: "none",
-                    },
-                    "&.Mui-focused": {
-                      outline: "none",
-                      boxShadow: "none",
-                    },
-                  }}
-                >
-                  <MenuItem value={0} disabled>
-                    Select
-                  </MenuItem>
-                  <MenuItem value={1}>1</MenuItem>
-                  <MenuItem value={2}>2</MenuItem>
-                  <MenuItem value={3}>3</MenuItem>
-                  <MenuItem value={4}>4+</MenuItem>
-                </Select>
-              </FormControl>
-              <Typography variant="body1" className="font-500">
-                വർഷം
-              </Typography>
-            </Box>
-          </Box>
-        );
-
-      case 2:
-        return (
-          <Box sx={{ py: 4 }}>
-            <Typography
-              variant="h5"
-              component="h2"
               sx={{ mb: 4, fontWeight: 500 }}
             >
               നിങ്ങൾ ഒരു ജോലിക്കാരായ ദമ്പതികളാണോ?
@@ -536,6 +481,61 @@ export const UserForm = ({ handleModalClose }) => {
                 />
               </Box>
             )}
+          </Box>
+        );
+
+      case 2:
+        return (
+          <Box sx={{ py: 4 }}>
+            <Typography
+              variant="h5"
+              component="h2"
+              sx={{ mb: 4, fontWeight: 400 }}
+            >
+              നിങ്ങൾ എത്ര കാലമായി ഒരു കുഞ്ഞിനായി ശ്രമിക്കുന്നു?
+            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
+              <FormControl sx={{ minWidth: 200 }}>
+                <Select
+                  value={formData.tryingDuration}
+                  onChange={(e) =>
+                    handleChange("tryingDuration", e.target.value)
+                  }
+                  size="small"
+                  displayEmpty
+                  sx={{
+                    backgroundColor: "#65C3CB33",
+                    color: "#65C3CB",
+                    border: "1.5px solid #65C3CB",
+                    borderRadius: "8px",
+                    "& svg": {
+                      color: "#65C3CB",
+                    },
+                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                      border: "none",
+                    },
+                    "& fieldset": {
+                      border: "none",
+                    },
+                    "&.Mui-focused": {
+                      outline: "none",
+                      boxShadow: "none",
+                    },
+                  }}
+                >
+                  <MenuItem value={0} disabled>
+                    Select
+                  </MenuItem>
+                  <MenuItem value={1}>1</MenuItem>
+                  <MenuItem value={2}>2</MenuItem>
+                  <MenuItem value={3}>3</MenuItem>
+                  <MenuItem value={4}>4+</MenuItem>
+                </Select>
+              </FormControl>
+              <Typography variant="body1" className="font-500">
+                വർഷം
+              </Typography>
+            </Box>
           </Box>
         );
 

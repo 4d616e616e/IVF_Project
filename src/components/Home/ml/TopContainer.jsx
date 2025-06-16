@@ -135,7 +135,7 @@ export const TopContainer = ({ scrollToForm }) => {
             }}
           >
             <Image
-              src={"/bg_hero.png"}
+              src={"/desktop.png"}
               alt="Hero Home IVF Image"
               width={576}
               height={706}

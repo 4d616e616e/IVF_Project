@@ -55,7 +55,7 @@ export const Footer = () => {
                 <Typography fontSize="22px" className="font-400">
                   We walk with you, with{" "}
                   <span className="font-700">science</span>,{" "}
-                  <span className="font-700">care</span>, and{" "}
+                  <span className="font-700">personalised care</span>, and{" "}
                   <span className="font-700">heart.</span>
                 </Typography>
               </Box>

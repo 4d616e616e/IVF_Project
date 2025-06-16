@@ -27,6 +27,10 @@ export const LastContainer = () => {
       title: "If you’re just looking for answers and clarity",
       image: "/images/arrows/a4.png",
     },
+    {
+      title: "If anyone in your family has a genetic disease",
+      image: "/images/arrows/a5.png",
+    },
   ];
 
   return (

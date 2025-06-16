@@ -75,19 +75,7 @@ export const TopContainer = ({ scrollToForm }) => {
                 }}
                 className="font-400"
               >
-                Do you feel
-              </Typography>
-              <Typography
-                fontSize={{ xs: "32px", md: "60px" }}
-                sx={{
-                  color: "#FFFFFF",
-                  lineHeight: { xs: "43px", md: "68px" },
-                }}
-              >
-                <span style={{ fontWeight: "bold" }} className="font-700">
-                  uncomfortable
-                </span>{" "}
-                <span className="font-400">while</span>
+                Feel <span className="font-700">uncomfortable</span>
               </Typography>
               <Typography
                 fontSize={{ xs: "32px", md: "60px" }}
@@ -108,7 +96,7 @@ export const TopContainer = ({ scrollToForm }) => {
                 }}
                 className="font-400"
               >
-                Now you can start your IVF journey right from{" "}
+                With HomeIVF, bring the clinic to
                 <span style={{ fontWeight: "bold" }} className="font-700">
                   your home.
                 </span>
@@ -138,7 +126,7 @@ export const TopContainer = ({ scrollToForm }) => {
             }}
           >
             <Image
-              src={"/bg_hero.png"}
+              src={"/desktop.png"}
               alt="Hero Home IVF Image"
               width={576}
               height={706}

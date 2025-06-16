@@ -28,8 +28,9 @@ export default function Home() {
       <Layout scrollToForm={scrollToForm}>
         <TopContainer scrollToForm={scrollToForm} />
         <FormContainer formRef={formRef} /> {/* Done */}
+        <RoadMapContainer />
+        {/* Done */}
         <StagesContainer scrollToForm={scrollToForm} /> {/* Done */}
-        <RoadMapContainer /> {/* Done */}
         <MiddleContainer scrollToForm={scrollToForm} /> {/* Done */}
         <WhyIVFContainer /> {/* Done */}
         <CarouselContainer scrollToForm={scrollToForm} /> {/* Done */}

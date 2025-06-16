@@ -6,7 +6,7 @@ import Image from "next/image";
 const whyIVFData = [
   {
     id: 1,
-    title: "More privacy, less pressure",
+    title: "More Privacy, personalised care",
     iconColor: "#98D2C3",
     bgcolor: "#98D2C34D",
     iconImage: "/images/smily.png",
@@ -24,7 +24,7 @@ const whyIVFData = [
   },
   {
     id: 3,
-    title: "Comfort of your own space",
+    title: "Comfort of your own home",
     iconColor: "#F6A8CA",
     bgcolor: "#FA74984D",
     iconImage: "/images/badge.png",
@@ -44,7 +44,7 @@ const whyIVFData = [
 
 const whyIVFDataLast = {
   id: 5,
-  title: "Includes genetic testing & personalised care",
+  title: "Genetic testing to improve IVF success and reduce inherited risks",
   iconColor: "#AB7FB0",
   bgcolor: "#AB7FB04D",
   iconImage: "/images/love.png",
