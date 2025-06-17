@@ -6,7 +6,7 @@ export const RoadMapContainer = () => {
   const isMobile = useMediaQuery("(max-width:500px)");
 
   return (
-    <Box sx={{ mt: { xs: "50px", md: "150px" } }}>
+    <Box sx={{ mt: { xs: "50px", md: "70px" } }}>
       <Container
         sx={{
           display: "flex",
@@ -27,7 +27,7 @@ export const RoadMapContainer = () => {
           src={isMobile ? "/images/roadmap2.svg" : "/images/roadmap.svg"}
           alt="Stages of Pregnancy"
           width={1262}
-          height={616}
+          height={700}
           style={{ maxWidth: "100%", height: "auto" }}
         />
       </Container>

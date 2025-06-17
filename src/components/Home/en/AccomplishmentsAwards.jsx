@@ -40,7 +40,7 @@ export const AccomplishmentsAwards = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          width: { xs: "100%", md: "1000px" },
+          width: { xs: "90%", md: "1000px" },
         }}
       >
         <Typography
