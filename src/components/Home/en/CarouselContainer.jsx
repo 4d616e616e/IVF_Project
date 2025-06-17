@@ -43,7 +43,8 @@ export const CarouselContainer = ({ scrollToForm }) => {
     },
     {
       id: 4,
-      title: "Anyone seeking a more compassionate and less clinical experience",
+      title:
+        "If someone in your family has a hereditary condition (like diabetes or thalassemia)",
       image: "/images/carousel/img4.png",
       bgColor: "#E1F2ED",
       textColor: "#2BBA95",
@@ -138,7 +139,7 @@ export const CarouselContainer = ({ scrollToForm }) => {
                     <Box
                       sx={{
                         bgcolor: item.bgColor,
-                        height: "120px",
+                        height: "150px",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",

@@ -23,13 +23,13 @@ export const LastContainer = () => {
       title: "If you're in your 30s and ready to take the next step",
       image: "/images/arrows/a3.png",
     },
-    {
-      title: "If you’re just looking for answers and clarity",
-      image: "/images/arrows/a4.png",
-    },
+    // {
+    //   title: "If you’re just looking for answers and clarity",
+    //   image: "/images/arrows/a4.png",
+    // },
     {
       title: "If anyone in your family has a genetic disease",
-      image: "/images/arrows/a5.png",
+      image: "/images/arrows/a4.png",
     },
   ];
 
@@ -54,7 +54,7 @@ export const LastContainer = () => {
             }}
           >
             <Image
-              src="/images/lastimg.png"
+              src="/images/lastImage.png"
               alt="IVF Considerations"
               width={506}
               height={338}

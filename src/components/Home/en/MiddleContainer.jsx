@@ -9,56 +9,97 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { AccomplishmentsAwards } from "./AccomplishmentsAwards";
+import { Gauri } from "./Gauri";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Scrollbar, Navigation } from "swiper/modules";
 
 // Mobile Component
-const MobileContainer = () => {
+const MobileContainer = ({ scrollToForm }) => {
   return (
     <Box sx={{ my: "80px" }}>
-      <Container maxWidth="xl" sx={{ px: 2 }}>
-        <Box
-          sx={{
-            pt: "30px",
-            pb: "30px",
-            bgcolor: "#F8F6EF",
-            borderRadius: "20px",
-          }}
-        >
-          <Box sx={{ textAlign: "center", mb: 3 }}>
-            <Image
-              src="/images/gauri.svg"
-              alt="Gauri Home IVF"
-              width={350}
-              height={196}
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Box>
-          <Box sx={{ px: 1 }}>
-            <Typography
-              sx={{
-                color: "#333333",
-                fontSize: "28px",
-                textAlign: "center",
-                mb: 2,
-              }}
-              className="font-400"
-            >
-              What is <span className="font-700">HomeIVF</span>?
-            </Typography>
-            <Typography
-              sx={{
-                color: "#717171",
-                fontSize: "18px",
-                textAlign: "center",
-                mb: 3,
-                lineHeight: 1.4,
-              }}
-              className="font-400"
-            >
-              HomeIVF by Dr. Gauri Agarwal is India's first fertility program
-              that brings almost the entire IVF process to
-              <span className="font-700"> your doorstep</span>.
-            </Typography>
-          </Box>
+      <Container maxWidth="xl" sx={{ px: 1.5 }}>
+        <Box sx={{ mx: 1 }}>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            navigation={true}
+            modules={[Navigation]}
+          >
+            <SwiperSlide>
+              <Box
+                sx={{
+                  pt: "30px",
+                  pb: "30px",
+                  bgcolor: "#F8F6EF",
+                  borderRadius: "20px",
+                }}
+              >
+                <Box sx={{ textAlign: "center", mb: 3 }}>
+                  <Image
+                    src="/images/gauri.svg"
+                    alt="Gauri Home IVF"
+                    width={350}
+                    height={196}
+                    style={{ maxWidth: "100%", height: "auto" }}
+                  />
+                </Box>
+                <Box sx={{ px: 1 }}>
+                  <Typography
+                    sx={{
+                      color: "#333333",
+                      fontSize: "28px",
+                      textAlign: "center",
+                      mt: "54px",
+                      mb: "35px",
+                    }}
+                    className="font-400"
+                  >
+                    What is <span className="font-700">HomeIVF</span>?
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#717171",
+                      fontSize: "18px",
+                      textAlign: "center",
+                      mb: "48px",
+                      lineHeight: 1.4,
+                    }}
+                    className="font-400"
+                  >
+                    HomeIVF by Dr. Gauri Agarwal is India's first fertility
+                    program that brings almost the entire IVF process to
+                    <span className="font-700"> your doorstep</span>.
+                  </Typography>
+                </Box>
+
+                <Box sx={{ mx: 2 }}>
+                  <Button
+                    onClick={scrollToForm}
+                    sx={{
+                      bgcolor: "#FA8E74",
+                      borderRadius: "10px",
+                      fontSize: "20px",
+                      textTransform: "none",
+                      color: "#FFFFFF",
+                    }}
+                    fullWidth
+                    className="font-700"
+                  >
+                    Talk to our IVF Expert
+                  </Button>
+                </Box>
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <AccomplishmentsAwards />
+            </SwiperSlide>
+          </Swiper>
         </Box>
       </Container>
     </Box>
@@ -68,61 +109,30 @@ const MobileContainer = () => {
 // Desktop Component
 const DesktopContainer = ({ scrollToForm }) => {
   return (
-    <Box sx={{ bgcolor: "#F8F6EF", my: "80px" }}>
-      <Container maxWidth="xl">
-        <Grid container sx={{ pt: "47px" }}>
-          <Grid item size={{ xs: 12, md: 6 }}>
-            <Image
-              src="/images/gauri.svg"
-              alt="Gauri Home IVF"
-              width={740}
-              height={414}
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Grid>
-          <Grid
-            item
-            size={{ xs: 12, md: 6 }}
-            sx={{
-              pl: { xs: 2, md: "30px" },
-              pr: { xs: 2, md: "15px", lg: "66px" },
-            }}
+    <Box sx={{ bgcolor: "#FFFFFF", my: "80px" }}>
+      <Container
+        maxWidth="xl"
+        sx={{
+          bgcolor: "#F8F6EF",
+          borderTopLeftRadius: "20px",
+          borderTopRightRadius: "20px",
+        }}
+      >
+        <Box sx={{ mx: -3 }}>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            navigation={true}
+            modules={[Navigation]}
           >
-            <Typography
-              sx={{ color: "#333333" }}
-              fontSize={{ xs: "38px", md: "48px" }}
-              className="font-400"
-            >
-              What is <span className="font-700">HomeIVF</span>?
-            </Typography>
-            <Typography
-              sx={{
-                color: "#717171",
-                fontSize: { md: "16px", lg: "32px" },
-                my: "35px",
-              }}
-              className="font-400"
-            >
-              HomeIVF by Dr. Gauri Agarwal is India's first fertility program
-              that brings almost the entire IVF process to
-              <span className="font-700"> your doorstep</span>.
-            </Typography>
-            <Button
-              onClick={scrollToForm}
-              sx={{
-                bgcolor: "#FA8E74",
-                borderRadius: "10px",
-                fontSize: "20px",
-                textTransform: "none",
-                color: "#FFFFFF",
-              }}
-              fullWidth
-              className="font-700"
-            >
-              Talk to our IVF Expert
-            </Button>
-          </Grid>
-        </Grid>
+            <SwiperSlide>
+              <Gauri scrollToForm={scrollToForm} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <AccomplishmentsAwards />
+            </SwiperSlide>
+          </Swiper>
+        </Box>
       </Container>
     </Box>
   );

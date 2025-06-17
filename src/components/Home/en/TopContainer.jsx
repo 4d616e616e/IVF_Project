@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 
 export const TopContainer = ({ scrollToForm }) => {
+  const isSmallLaptop = useMediaQuery("(max-width:768px)");
   const isMobile = useMediaQuery("(max-width:500px)");
 
   return (
@@ -75,7 +76,37 @@ export const TopContainer = ({ scrollToForm }) => {
                 }}
                 className="font-400"
               >
-                Feel <span className="font-700">uncomfortable</span>
+                Feel{" "}
+                <span
+                  className="font-700"
+                  style={{
+                    position: "relative",
+                    display: "inline-block",
+                    zIndex: 1,
+                  }}
+                >
+                  <span style={{ position: "relative", zIndex: 2 }}>
+                    uncomfortable
+                  </span>
+                  <div
+                    variant="div"
+                    style={{
+                      position: "absolute",
+                      top: isSmallLaptop ? "17px" : "27px",
+                      left: "22px",
+                      zIndex: 1,
+                      pointerEvents: "none", // allows text selection through the image
+                    }}
+                  >
+                    <Image
+                      src="/images/maholPuraWavy.png"
+                      layout="intrinsic"
+                      width={345}
+                      height={64}
+                      alt="Mahol Pura Wavy"
+                    />
+                  </div>
+                </span>
               </Typography>
               <Typography
                 fontSize={{ xs: "32px", md: "60px" }}
@@ -138,5 +169,3 @@ export const TopContainer = ({ scrollToForm }) => {
     </Box>
   );
 };
-
-//4d616e616e
