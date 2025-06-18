@@ -69,6 +69,7 @@ export const TopContainer = ({ scrollToForm }) => {
             {/* Content */}
             <Box sx={{ position: "relative", zIndex: 1 }}>
               <Typography
+                variant="body"
                 fontSize={{ xs: "32px", md: "60px" }}
                 sx={{
                   color: "#FFFFFF",
@@ -85,10 +86,10 @@ export const TopContainer = ({ scrollToForm }) => {
                     zIndex: 1,
                   }}
                 >
-                  <span style={{ position: "relative", zIndex: 2 }}>
+                  <Box style={{ position: "relative", zIndex: 2 }}>
                     uncomfortable
-                  </span>
-                  <div
+                  </Box>
+                  <Box
                     variant="div"
                     style={{
                       position: "absolute",
@@ -105,7 +106,7 @@ export const TopContainer = ({ scrollToForm }) => {
                       height={64}
                       alt="Mahol Pura Wavy"
                     />
-                  </div>
+                  </Box>
                 </span>
               </Typography>
               <Typography

@@ -43,5 +43,3 @@ export default function Home() {
     </>
   );
 }
-
-//4d616e616e

@@ -107,7 +107,7 @@ export const FormContainer = ({ formRef }) => {
 
   const submitFormData = async (data) => {
     try {
-      const response = await fetch("https://devapi.homeivf.com/api/form", {
+      const response = await fetch("/api/general", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -236,16 +236,13 @@ export const UserForm = ({ handleModalClose }) => {
     try {
       const payload = getStepPayload(step);
 
-      const response = await fetch(
-        `https://devapi.homeivf.com/api/form/${form_id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      const response = await fetch(`/api/general/?id=${form_id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
       const result = await response.json();
 
