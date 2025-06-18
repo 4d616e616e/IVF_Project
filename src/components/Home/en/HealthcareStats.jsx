@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  Container,
-  Grid,
-  Paper,
-  Tooltip,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Box, Typography, Container, Grid, Tooltip } from "@mui/material";
 
 export const HealthcareStats = () => {
   const stats = [
@@ -46,13 +38,6 @@ export const HealthcareStats = () => {
                     borderRight: index !== 2 && "1px solid #333333",
                   }}
                 >
-                  <Typography
-                    color={stat.color}
-                    fontSize={{ xs: "24px", md: "68px" }}
-                    className="font-700"
-                  >
-                    {stat.number}
-                  </Typography>
                   {stat.label === "Success Rate*" ? (
                     <Tooltip
                       title="with Genetic Testing"
@@ -74,6 +59,13 @@ export const HealthcareStats = () => {
                     >
                       <Typography
                         color={stat.color}
+                        fontSize={{ xs: "24px", md: "68px" }}
+                        className="font-700"
+                      >
+                        {stat.number}
+                      </Typography>
+                      <Typography
+                        color={stat.color}
                         fontSize={{ xs: "12px", md: "24px" }}
                         className="font-500"
                         textAlign={"center"}
@@ -82,14 +74,23 @@ export const HealthcareStats = () => {
                       </Typography>
                     </Tooltip>
                   ) : (
-                    <Typography
-                      color={stat.color}
-                      fontSize={{ xs: "12px", md: "24px" }}
-                      className="font-500"
-                      textAlign={"center"}
-                    >
-                      {stat.label}
-                    </Typography>
+                    <>
+                      <Typography
+                        color={stat.color}
+                        fontSize={{ xs: "24px", md: "68px" }}
+                        className="font-700"
+                      >
+                        {stat.number}
+                      </Typography>
+                      <Typography
+                        color={stat.color}
+                        fontSize={{ xs: "12px", md: "24px" }}
+                        className="font-500"
+                        textAlign={"center"}
+                      >
+                        {stat.label}
+                      </Typography>
+                    </>
                   )}
                 </Grid>
               </React.Fragment>
