@@ -68,60 +68,61 @@ export const TopContainer = ({ scrollToForm }) => {
             {/* Content */}
             <Box sx={{ position: "relative", zIndex: 1 }}>
               <Typography
-                fontSize={{ xs: "32px", md: "60px" }}
+                fontSize={{ xs: "37px", md: "60px" }}
                 sx={{
                   color: "#FFFFFF",
                   lineHeight: { xs: "43px", md: "68px" },
                 }}
-                className="font-400"
+                className="font-oct-400 "
               >
-                क्या आपको भी IVF
+                शादी हुए कई साल हो गये
               </Typography>
               <Typography
-                fontSize={{ xs: "32px", md: "60px" }}
+                fontSize={{ xs: "37px", md: "60px" }}
                 sx={{
                   color: "#FFFFFF",
                   lineHeight: { xs: "43px", md: "68px" },
                 }}
               >
-                <span className="font-400">क्लिनिक जाना</span>{" "}
-                <span className="font-700">अजीब</span>
-              </Typography>
-              <Typography
-                fontSize={{ xs: "32px", md: "60px" }}
-                sx={{
-                  color: "#FFFFFF",
-                  lineHeight: { xs: "43px", md: "68px" },
-                }}
-                className="font-400"
-              >
-                लगता है?
+                <span className="font-oct-400 ">लेकिन</span>{" "}
+                <span className="font-oct-500 ">संतान सुख नहीं ?</span>
               </Typography>
               <Typography
                 sx={{
                   fontSize: { xs: "24px", md: "50px" },
                   lineHeight: { xs: "34px", md: "46px" },
                   color: "#DBDBDB",
-                  my: "32px",
+                  my: { xs: "20px", md: "32px" },
                 }}
-                className="font-400"
+                className="font-oct-400 "
               >
-                अब अपने <span className="font-700">घर से शुरू</span> करें अपनी
-                IVF यात्रा
+                कोई बात नहीं, हम हैं ना !
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "28px", md: "40px" },
+                  lineHeight: { xs: "34px", md: "50px" },
+                  color: "#DBDBDB",
+                  my: { xs: "20px", md: "32px" },
+                }}
+                className="font-oct-400 "
+              >
+                संतान होने में आ रही मुश्किलों को HomeIVF करेगी दूर, वो भी घर
+                बैठे-बैठे
               </Typography>
               <Button
                 onClick={scrollToForm}
                 sx={{
-                  fontSize: "20px",
+                  fontSize: { xs: "16px", md: "20px" },
                   textTransform: "none",
                   bgcolor: "#FA8E74",
                   color: "#FFFFFF",
                   borderRadius: "10px",
                 }}
                 fullWidth
-                className="font-700"
+                className="font-oct-700 "
               >
-                तुरंत अपॉइंटमेंट बुक करें
+                ज़्यादा जानकारी के लिए अभी कॉल कीजिए
               </Button>
             </Box>
           </Grid>

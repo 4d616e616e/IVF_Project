@@ -1,5 +1,6 @@
 import { CarouselContainer } from "@/components/Home/in/CarouselContainer";
 import { FormContainer } from "@/components/Home/in/FormContainer";
+import { HealthcareStats } from "@/components/Home/in/HealthcareStats";
 import { LastContainer } from "@/components/Home/in/LastContainer";
 import { MiddleContainer } from "@/components/Home/in/MiddleContainer";
 import { RoadMapContainer } from "@/components/Home/in/RoadMapContainer";
@@ -30,6 +31,7 @@ export default function Home() {
       </Head>
       <Layout scrollToForm={scrollToForm}>
         <TopContainer scrollToForm={scrollToForm} />
+        <HealthcareStats />
         <FormContainer formRef={formRef} /> {/* Done */}
         <RoadMapContainer /> {/* Done */}
         <StagesContainer scrollToForm={scrollToForm} /> {/* Done */}

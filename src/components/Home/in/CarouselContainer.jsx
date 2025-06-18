@@ -44,7 +44,8 @@ export const CarouselContainer = ({ scrollToForm }) => {
     },
     {
       id: 4,
-      title: "जिन्हें अधिक दयालु और कम क्लिनिक विजिट वाला ट्रीटमेंट चाहिए",
+      title:
+        "अगर आपके परिवार में कोई वंशानुगत रोग (शुगर, थैलेसीमिया आदि) है और आप अपने होने वाले बच्चे को इससे बचाना चाहते हैं ",
       image: "/images/carousel/img4.png",
       bgColor: "#E1F2ED",
       textColor: "#2BBA95",
@@ -80,9 +81,9 @@ export const CarouselContainer = ({ scrollToForm }) => {
                   fontWeight: "400",
                   color: "#333333",
                 }}
-                className="font-400"
+                className="font-oct-400"
               >
-                यह <span className="font-700"> किसके </span> लिए है?
+                यह किसके लिए है?
               </Typography>
             </Box>
           </Box>
@@ -139,22 +140,22 @@ export const CarouselContainer = ({ scrollToForm }) => {
                     <Box
                       sx={{
                         bgcolor: item.bgColor,
-                        height: "120px",
+                        height: "125px",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         textAlign: "center",
                         py: "7px",
-                        px: "10px",
+                        px: "12px",
                       }}
                     >
                       <Typography
                         sx={{
-                          fontSize: { xs: "20px", md: "24px" },
+                          fontSize: "20px",
                           color: item.textColor,
                           lineHeight: 1.3,
                         }}
-                        className="font-500"
+                        className="font-oct-500"
                       >
                         {item.title}
                       </Typography>
@@ -178,7 +179,7 @@ export const CarouselContainer = ({ scrollToForm }) => {
                   color: "#FFFFFF",
                   width: { xs: "100%", sm: "500px", md: "612px" },
                 }}
-                className="font-700"
+                className="font-oct-500"
               >
                 बात करें हमारे IVF एक्सपर्ट के साथ
               </Button>

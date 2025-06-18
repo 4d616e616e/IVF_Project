@@ -42,22 +42,21 @@ export const HindiFooter = () => {
               )}
 
               <Box sx={{ mx: { xs: 2, md: 0 }, my: { xs: "21px", md: 0 } }}>
-                <Typography fontSize="22px" className="font-400">
-                  इतने लंबे समय से आप मजबूत रहे हैं, अब हमें भी दीजिए सेवा का
-                  मौका
+                <Typography fontSize="30px" className="font-oct-400">
+                  आपके अधूरे परिवार को पूरा करना हमारा एक मात्र लक्ष्य है
                 </Typography>
                 <Typography
-                  fontSize="22px"
+                  fontSize="30px"
                   sx={{ my: "16px" }}
-                  className="font-400"
+                  className="font-oct-400"
                 >
-                  HomeIVF में, आप अकेले नहीं हैं
+                  और ये सफ़र हम दोनों साथ में तय करेंगे
                 </Typography>
-                <Typography fontSize="22px" className="font-400">
-                  हम हर कदम पर खड़े हैं आपके साथ -
-                  <span className="font-700">साइंस</span>,{" "}
-                  <span className="font-700">केयर</span>, और{" "}
-                  <span className="font-700">पूरे दिल</span> से
+                <Typography fontSize="30px" className="font-oct-400">
+                  HomeIVF के साथ
+                </Typography>
+                <Typography className="font-oct-500" fontSize="30px">
+                  अब घर की बात, घर में ही{" "}
                 </Typography>
               </Box>
             </Box>

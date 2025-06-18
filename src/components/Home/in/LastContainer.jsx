@@ -12,7 +12,7 @@ import React from "react";
 export const LastContainer = () => {
   const content = [
     {
-      title: `अगर आप बिना किसी परिणाम के प्राकृतिक प्रयासों से थक चुके हैं`,
+      title: `अगर आप बिना किसी परिणाम के प्राकृतिक प्रयासों से थक चुके हैं `,
       image: "/images/arrows/a1.png",
     },
     {
@@ -24,7 +24,8 @@ export const LastContainer = () => {
       image: "/images/arrows/a3.png",
     },
     {
-      title: "या आपको अधिक क्लैरिटी और परिणाम चाहिए",
+      title:
+        "अगर आपके परिवार में किसी को हेरीडेटोरी बीमारी(शुगर, थैलेसेमिया) है और आप अपने होने वाली संतान को ऐसी बीमारी से बचाना चाहते हैं",
       image: "/images/arrows/a4.png",
     },
   ];
@@ -35,14 +36,14 @@ export const LastContainer = () => {
         <Typography
           textAlign="center"
           fontSize={{ xs: "38px", md: "48px" }}
-          className="font-400"
+          className="font-oct-400"
         >
-          <span className="font-700">कब</span> कराएं IVF?
+          <span className="font-oct-500">कब</span> कराएं IVF?
         </Typography>
         <Grid container sx={{ mt: "30px", alignItems: "center" }}>
           <Grid
             item
-            size={{ xs: 12, md: 6 }}
+            size={{ xs: 12, md: 5 }}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -50,7 +51,7 @@ export const LastContainer = () => {
             }}
           >
             <Image
-              src="/images/lastimg.png"
+              src="/images/lastImage.png"
               alt="IVF Considerations"
               width={506}
               height={338}
@@ -59,16 +60,16 @@ export const LastContainer = () => {
           </Grid>
           <Grid
             item
-            size={{ xs: 12, md: 6 }}
-            sx={{ mt: { xs: "42px", md: 0 }, pl: { md: 2, lg: 0 } }}
+            size={{ xs: 12, md: 7 }}
+            sx={{ mt: { xs: "42px", md: 0 }, pl: { md: 2, lg: 5 } }}
           >
             {content?.map((item, key) => (
               <React.Fragment key={key}>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                   <Image src={item?.image} height={18} width={30} alt="" />
                   <Typography
-                    sx={{ fontSize: { xs: "20px", md: "22px" } }}
-                    className="font-400"
+                    sx={{ fontSize: { xs: "20px", md: "24px" } }}
+                    className="font-oct-400"
                   >
                     {item?.title}
                   </Typography>

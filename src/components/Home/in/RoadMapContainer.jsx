@@ -1,10 +1,12 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
 export const RoadMapContainer = () => {
+  const isMobile = useMediaQuery("(max-width:500px)");
+
   return (
-    <Box sx={{ mt: { xs: "90px", md: "150px" } }}>
+    <Box sx={{ mt: { xs: "50px", md: "70px" } }}>
       <Container
         sx={{
           display: "flex",
@@ -14,17 +16,22 @@ export const RoadMapContainer = () => {
       >
         <Typography
           textAlign="center"
-          fontSize={{ xs: "38px", md: "48px" }}
-          sx={{ mb: "80px" }}
-          className="font-400"
+          fontSize={{ xs: "40px", md: "48px" }}
+          sx={{ mb: { xs: "30px", md: "80px" } }}
+          className="font-oct-400"
         >
-          HomeIVF <span className="font-700">कैसे</span> काम करता है?
+          <span className="font-oct-500">HomeIVF</span> कैसे काम करता है?
         </Typography>
+
         <Image
-          src="/images/hin/hindiIVF.svg"
+          src={
+            isMobile
+              ? "/images//hin/smallHinidIVF.svg"
+              : "/images/hin/hindiIVF.svg"
+          }
           alt="Stages of Pregnancy"
           width={1262}
-          height={616}
+          height={700}
           style={{ maxWidth: "100%", height: "auto" }}
         />
       </Container>

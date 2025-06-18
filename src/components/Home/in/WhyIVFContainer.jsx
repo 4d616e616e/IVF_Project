@@ -6,7 +6,7 @@ import Image from "next/image";
 const whyIVFData = [
   {
     id: 1,
-    title: "ज्यादा प्राइवेसी, कम प्रेशर",
+    title: "100% प्राइवेसी ",
     iconColor: "#98D2C3",
     bgcolor: "#98D2C34D",
     iconImage: "/images/smily.png",
@@ -15,16 +15,16 @@ const whyIVFData = [
   },
   {
     id: 2,
-    title: "हर कदम पर फर्टिलिटी एक्सपर्ट्स द्वारा मार्गदर्शन",
-    iconColor: "#65C3CB",
-    bgcolor: "#65C3CB4D",
-    iconImage: "/images/doc.png",
-    height: 51,
+    title: "24*7 केयर ",
+    iconColor: "#AB7FB0",
+    bgcolor: "#AB7FB04D",
+    iconImage: "/images/love.png",
+    height: 42,
     width: 38,
   },
   {
     id: 3,
-    title: "आपके अपने कम्फर्ट स्पेस में  ",
+    title: "सारी सुविधा आपके घर पर",
     iconColor: "#F6A8CA",
     bgcolor: "#FA74984D",
     iconImage: "/images/badge.png",
@@ -33,22 +33,22 @@ const whyIVFData = [
   },
   {
     id: 4,
-    title: "केवल जरूरी स्थिति में ही क्लिनिक विजिट",
+    title: "जेनेटिक टेस्टिंग की सुविधा",
     iconColor: "#FFC001",
     bgcolor: "#FFC00133",
-    iconImage: "/images/car.png",
-    height: 23,
-    width: 46,
+    iconImage: "/images/dna.png",
+    height: 38,
+    width: 38,
   },
 ];
 
 const whyIVFDataLast = {
   id: 5,
-  title: "जेनेटिक टेस्टिंग एवं पर्सनलाइज्ड केयर के साथ",
-  iconColor: "#AB7FB0",
-  bgcolor: "#AB7FB04D",
-  iconImage: "/images/love.png",
-  height: 42,
+  title: "हर कदम पर फर्टिलिटी एक्सपर्ट्स द्वारा पर्सनलाइज्ड केयर",
+  iconColor: "#65C3CB",
+  bgcolor: "#65C3CB4D",
+  iconImage: "/images/doc.png",
+  height: 51,
   width: 38,
 };
 
@@ -98,14 +98,14 @@ const WhyIVFItem = ({ item }) => {
 export const WhyIVFContainer = () => {
   return (
     <Box sx={{ mt: "80px", mb: "20px" }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Box sx={{ mx: { xs: 0, md: 10 } }}>
           <Typography
             textAlign="center"
             sx={{ fontSize: { xs: "38px", md: "48px" }, mb: 6 }}
-            className="font-400"
+            className="font-oct-400"
           >
-            <span className="font-700">क्यों</span> HomeIVF?
+            <span className="font-oct-500">क्यों</span> HomeIVF?
           </Typography>
           <Grid container>
             {whyIVFData.map((item) => (
@@ -115,7 +115,7 @@ export const WhyIVFContainer = () => {
           <Grid
             item
             size={{ xs: 12, md: 6 }}
-            sx={{ py: 5, px: { xs: 2, md: 25, lg: 40 }, position: "relative" }}
+            sx={{ py: 5, px: { xs: 2, md: 25, lg: 25 }, position: "relative" }}
           >
             <Box
               sx={{
@@ -125,7 +125,7 @@ export const WhyIVFContainer = () => {
                 bgcolor: whyIVFDataLast.iconColor,
                 borderRadius: "9px",
                 top: 0,
-                left: { xs: 0, md: 180, lg: 295 },
+                left: { xs: 0, md: 180, lg: 174 },
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -150,7 +150,7 @@ export const WhyIVFContainer = () => {
             >
               <Typography
                 fontSize={{ xs: "20px", md: "24px" }}
-                className="font-300"
+                className="font-oct-300"
               >
                 {whyIVFDataLast.title}
               </Typography>

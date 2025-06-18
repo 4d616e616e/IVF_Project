@@ -241,10 +241,9 @@ export const FormContainer = ({ formRef }) => {
             fontSize={{ xs: "38px", md: "48px" }}
             textAlign="center"
             sx={{ mb: "38px" }}
-            className="font-400"
+            className="font-oct-400"
           >
-            मात्र <span className="font-700">एक</span> सिम्पल स्टेप से करें
-            शुरूआत !
+            कुछ ज़रूरी सवाल
           </Typography>
 
           <form
@@ -446,7 +445,7 @@ export const FormContainer = ({ formRef }) => {
                 },
               }}
               fullWidth
-              className="font-700"
+              className="font-oct-500"
             >
               {loading ? (
                 <>

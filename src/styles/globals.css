@@ -1,14 +1,14 @@
 /* AeonikPro Thin */
 @font-face {
   font-family: "AeonikPro Thin";
-  src: url("/fonts/AeonikPro-Thin.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-Thin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AeonikPro Thin Italic";
-  src: url("/fonts/AeonikPro-ThinItalic.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-ThinItalic.otf") format("opentype");
   font-weight: 100;
   font-style: italic;
 }
@@ -16,14 +16,14 @@
 /* AeonikPro Air */
 @font-face {
   font-family: "AeonikPro Air";
-  src: url("/fonts/AeonikPro-Air.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-Air.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AeonikPro Air Italic";
-  src: url("/fonts/AeonikPro-AirItalic.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-AirItalic.otf") format("opentype");
   font-weight: 200;
   font-style: italic;
 }
@@ -31,14 +31,14 @@
 /* AeonikPro Light */
 @font-face {
   font-family: "AeonikPro Light";
-  src: url("/fonts/AeonikPro-Light.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AeonikPro Light Italic";
-  src: url("/fonts/AeonikPro-LightItalic.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-LightItalic.otf") format("opentype");
   font-weight: 300;
   font-style: italic;
 }
@@ -46,14 +46,14 @@
 /* AeonikPro Regular */
 @font-face {
   font-family: "AeonikPro Regular";
-  src: url("/fonts/AeonikPro-Regular.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AeonikPro Regular Italic";
-  src: url("/fonts/AeonikPro-RegularItalic.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-RegularItalic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
 }
@@ -61,14 +61,14 @@
 /* AeonikPro Medium */
 @font-face {
   font-family: "AeonikPro Medium";
-  src: url("/fonts/AeonikPro-Medium.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AeonikPro Medium Italic";
-  src: url("/fonts/AeonikPro-MediumItalic.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-MediumItalic.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
 }
@@ -76,14 +76,14 @@
 /* AeonikPro Bold */
 @font-face {
   font-family: "AeonikPro Bold";
-  src: url("/fonts/AeonikPro-Bold.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AeonikPro Bold Italic";
-  src: url("/fonts/AeonikPro-BoldItalic.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-BoldItalic.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
 }
@@ -91,16 +91,80 @@
 /* AeonikPro Black */
 @font-face {
   font-family: "AeonikPro Black";
-  src: url("/fonts/AeonikPro-Black.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AeonikPro Black Italic";
-  src: url("/fonts/AeonikPro-BlackItalic.otf") format("opentype");
+  src: url("/fonts/aeonik/AeonikPro-BlackItalic.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
+}
+
+/* OctoberDL Regular */
+@font-face {
+  font-family: "OctoberDL Regular";
+  src: url("/fonts/oct/OctoberDL-Regular-01.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* OctoberDL Medium */
+@font-face {
+  font-family: "OctoberDL Medium";
+  src: url("/fonts/oct/OctoberDL-Medium-02.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* OctoberDL Heavy */
+@font-face {
+  font-family: "OctoberDL Heavy";
+  src: url("/fonts/oct/OctoberDL-Heavy-04.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* OctoberDL Black */
+@font-face {
+  font-family: "OctoberDL Black";
+  src: url("/fonts/oct/OctoberDL-Black-05.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* OctoberDL Light */
+@font-face {
+  font-family: "OctoberDL Light";
+  src: url("/fonts/oct/OctoberDL-Light-06.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* OctoberDL Extra Light */
+@font-face {
+  font-family: "OctoberDL ExtraLight";
+  src: url("/fonts/oct/OctoberDL-ExtraLight-07.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* OctoberDL Thin */
+@font-face {
+  font-family: "OctoberDL Thin";
+  src: url("/fonts/oct/OctoberDL-Thin-08.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* OctoberDL Hairline */
+@font-face {
+  font-family: "OctoberDL Hairline";
+  src: url("/fonts/oct/OctoberDL-Hairline-09.otf") format("opentype");
+  font-weight: 50;
+  font-style: normal;
 }
 
 .font-700 {
@@ -117,6 +181,38 @@
 
 .font-300 {
   font-family: "AeonikPro Light" !important;
+}
+
+.font-oct-900 {
+  font-family: "OctoberDL Black" !important;
+}
+
+.font-oct-800 {
+  font-family: "OctoberDL Heavy" !important;
+}
+
+.font-oct-500 {
+  font-family: "OctoberDL Medium" !important;
+}
+
+.font-oct-400 {
+  font-family: "OctoberDL Regular" !important;
+}
+
+.font-oct-300 {
+  font-family: "OctoberDL Light" !important;
+}
+
+.font-oct-200 {
+  font-family: "OctoberDL ExtraLight" !important;
+}
+
+.font-oct-100 {
+  font-family: "OctoberDL Thin" !important;
+}
+
+.font-oct-50 {
+  font-family: "OctoberDL Hairline" !important;
 }
 
 .swiper-button-next,
@@ -155,11 +251,11 @@
 @media (max-width: 768px) {
   .swiper-button-next {
     right: 1px !important;
-    top: 300px !important;
+    top: 275px !important;
   }
 
   .swiper-button-prev {
     left: 1px !important;
-    top: 300px !important;
+    top: 275px !important;
   }
 }

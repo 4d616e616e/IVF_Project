@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Typography, Container, Grid, Tooltip } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Container,
+  Grid,
+  Paper,
+  Tooltip,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 export const HealthcareStats = () => {
   const stats = [

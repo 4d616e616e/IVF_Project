@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
     // Determine the external API endpoint based on method
     if (method === "POST") {
-      apiUrl = "https://devapi.homeivf.com/api/form";
+      apiUrl = "https://api.homeivf.com/api/form";
     } else if (method === "PUT") {
       // For PUT requests, expect an 'id' in query parameters
       const { id } = query;
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
         });
       }
 
-      apiUrl = `https://devapi.homeivf.com/api/form/${id}`;
+      apiUrl = `https://api.homeivf.com/api/form/${id}`;
     }
 
     // Make request to external API

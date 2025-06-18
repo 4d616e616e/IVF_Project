@@ -17,9 +17,9 @@ export const StagesContainer = ({ scrollToForm }) => {
             textAlign="center"
             fontSize={{ xs: "38px", md: "48px" }}
             sx={{ mb: "9px" }}
-            className="font-400"
+            className="font-oct-400"
           >
-            आप हैं <span className="font-700">संतान सुख</span> के एक कदम करीब
+            अधूरा परिवार होगा जल्दी ही पूरा
           </Typography>
           <Image
             src="/images/p-stages.png"
@@ -37,9 +37,9 @@ export const StagesContainer = ({ scrollToForm }) => {
               mt: "35px",
               mb: "30px",
             }}
-            className="font-400"
+            className="font-oct-400"
           >
-            कृपया इन सवालों के जवाब देकर करें अपनी यात्रा आसान
+            सवालों के जवाब दीजिए ताकि हम आपको और बेहतर तरीक़े से जान सकें
           </Typography>
           <Button
             onClick={scrollToForm}
@@ -51,9 +51,9 @@ export const StagesContainer = ({ scrollToForm }) => {
               px: "85px",
               color: "#FFFFFF",
             }}
-            className="font-700"
+            className="font-oct-500"
           >
-            शुरुआत करें
+            यहाँ क्लिक करें
           </Button>
         </Container>
       </Box>
